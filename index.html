@@ -47,8 +47,7 @@
         }
 
         else {
-            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" 
-                        + qrText1.value + "_" + qrText2.value + "_" + qrText3.value;
+            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText1.value.trim() + "_" + qrText2.value.trim() + "_" + qrText3.value.trim();
 
             imgBox.classList.add("show-img");
         }
@@ -57,3 +56,4 @@
     </script>
 </body>
 </html>
+
