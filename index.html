@@ -21,14 +21,16 @@
     
     <script>
         
+    let imgBox = document.getElementById("imgBox");
+    let qrImage = document.getElementById("qrImage");
+    let qrText1 = document.getElementById("qrText1");
+    let qrText2 = document.getElementById("qrText2");
+    let qrText3 = document.getElementById("qrText3");
 
-        let imgBox = document.getElementById("imgBox");
-        let qrImage = document.getElementById("qrImage");
-        let qrText1 = document.getElementById("qrText1");
-        let qrText2 = document.getElementById("qrText2");
-        let qrText3 = document.getElementById("qrText3");
+    const now = new Date(); // Creates a new Date object representing the current moment
+    const formattedDateTime = now.toLocaleString(); // Uses local time zone and format
 
-        function GenerateQR() {
+    function GenerateQR() {
         if (qrText1.value.trim() === "" || qrText2.value.trim() === "" || qrText3.value.trim() === "") {
             qrText1.classList.add('error');
             setTimeout(()=>{
@@ -47,7 +49,8 @@
         }
 
         else {
-            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText1.value.trim() + "_" + qrText2.value.trim() + "_" + qrText3.value.trim();
+            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" 
+                        + qrText1.value.trim() + "_" + qrText2.value.trim() + "_" + qrText3.value.trim() + "_" + formattedDateTime;
 
             imgBox.classList.add("show-img");
         }
@@ -56,4 +59,3 @@
     </script>
 </body>
 </html>
-
