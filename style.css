@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-    background: #262a2f;
+    background: #75339C;
 }
 
 .container {
@@ -16,7 +16,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
-    border-radius: 10px;
+    border-radius: 10px;    
+    box-shadow: horizontal-offset vertical-offset blur-radius spread-radius #3D3D3D;
 }
 
 .container P{
@@ -28,7 +29,7 @@ body {
 .container input{
     width: 100%;
     height: 50px;
-    border: 1px solid #494eea;
+    border: 1px solid #731818;
     outline: 0;
     padding: 10px;
     margin: 10px 0 20px;
@@ -38,7 +39,7 @@ body {
 .container button{
     width: 100%;
     height: 50px;
-    background: #494eea;
+    background: #731818;
     color: #fff;
     border: 0;
     outline: 0;
