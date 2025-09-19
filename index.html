@@ -54,7 +54,7 @@
             const formattedDateTime = now.toLocaleString(); // Uses local time zone and format
             
             qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" 
-                        + qrText1.value.trim() + "&" + qrText2.value.trim() + "&" + qrText3.value.trim() + "&" + formattedDateTime;
+                        + qrText1.value.trim() + "_" + qrText2.value.trim() + "_" + qrText3.value.trim() + "_" + formattedDateTime;
 
             imgBox.classList.add("show-img");
         }
@@ -63,4 +63,5 @@
     </script>
 </body>
 </html>
+
 
